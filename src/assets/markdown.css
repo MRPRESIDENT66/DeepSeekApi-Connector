@@ -1,0 +1,82 @@
+/* 代码块样式 */
+.hljs {
+    border-radius: 6px;
+    padding: 12px;
+    background: #f8f8f8;
+    margin: 8px 0;
+    overflow-x: auto;
+}
+
+/* 表格样式 */
+.markdown-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+}
+
+.markdown-table th, .markdown-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+/* 消息卡片样式 */
+.message-card.assistant {
+    background: #f5f5f5;
+    margin-right: 20%;
+}
+
+.message-card.user {
+    background: #e3f2fd;
+    margin-left: 20%;
+}
+
+.message-content {
+    line-height: 1.6;
+}
+
+.message-content p {
+    margin: 8px 0;
+}
+
+
+
+/* 代码底部操作栏 */
+.code-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 12px;
+    background: #f0f0f0;
+    border-top: 1px solid #ddd;
+}
+
+/* 最小化复制按钮 */
+.code-block-wrapper {
+    position: relative;
+}
+
+.copy-btn {
+    top: 6px;
+    right: 6px;
+    font-size: 12px;
+    padding: 2px 6px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    height: 19px;
+    width: 40px;
+}
+
+.copy-btn svg {
+    width: 12px;
+    height: 12px;
+    margin-right: 3px;
+}
+
+
+
