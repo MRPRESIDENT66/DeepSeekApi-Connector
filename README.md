@@ -1,24 +1,17 @@
-# deepseek
+# DeepSeek API 连接器
 
-## Project setup
+1. ### 安装环境依赖
 ```
 pnpm install
 ```
 
-### Compiles and hot-reloads for development
+2. ### 修改自己的 ApiKey
+#### App.vue文件第97行
 ```
-pnpm run serve
-```
-
-### Compiles and minifies for production
-```
-pnpm run build
+let api = '分号内改成自己的Key'
 ```
 
-### Lints and fixes files
+3. ### 运行项目
 ```
-pnpm run lint
+pnpm serve
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
