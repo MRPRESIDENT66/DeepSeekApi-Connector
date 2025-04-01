@@ -106,7 +106,7 @@ const messages = ref([]);
 const isActive = ref(false)
 const isComposing = ref(false)
 const lastKeyWasCompositionEnd = ref(false)
-
+// const testMessages = ref([{role:'assistant',content:"### **1. 法语动词 \"jouer\" 的现在时变位表 (Présent de l’indicatif)**  \n\n| **人称 (Pronom)** | **变位 (Conjugaison)** |  \n|------------------|----------------------|  \n| Je               | joue                 |  \n| Tu               | joues                |  \n| Il / Elle / On   | joue                 |  \n| Nous             | jouons               |  \n| Vous             | jouez                |  \n| Ils / Elles      | jouent               |  \n\n---\n\n### **2. RMSE（均方根误差）计算公式**  \n\nRMSE（Root Mean Square Error）用于衡量预测值与真实值之间的误差，计算公式如下：  \n\n\\[\nRMSE = \\sqrt{ \\frac{1}{n} \\sum_{i=1}^{n} (y_i - \\hat{y}_i)^2 }\n\\]  \n\n**其中：**  \n- \\( y_i \\) = 真实值  \n- \\( \\hat{y}_i \\) = 预测值  \n- \\( n \\) = 样本数量  \n\n**计算步骤：**  \n1. 计算每个预测值与真实值的误差（\\( y_i - \\hat{y}_i \\)）  \n2. 对误差平方（\\( (y_i - \\hat{y}_i)^2 \\)）  \n3. 计算所有平方误差的平均值（\\( \\frac{1}{n} \\sum_{i=1}^{n} (y_i - \\hat{y}_i)^2 \\)）  \n4. 取平均值的平方根，得到 RMSE  \n\n**示例（Python 代码计算 RMSE）：**  \n```python\nimport numpy as np\n\ny_true = np.array([3, 5, 2.5, 7])  # 真实值\ny_pred = np.array([2.5, 5, 4, 8])   # 预测值\n\nrmse = np.sqrt(np.mean((y_true - y_pred)**2))\nprint(\"RMSE:\", rmse)\n```\n\n希望这两个内容对你有帮助！ 😊"}])
 
 const openai = new OpenAI({
   baseURL: 'https://api.deepseek.com', // 使用 DeepSeek API 地址
@@ -127,7 +127,6 @@ const handleEnter = (event) => {
   if (isRealEnter && !event.shiftKey) {
     sendMessage()
   }
-
   // 重置标记（防止compositionend后的第一个Enter被误判）
   lastKeyWasCompositionEnd.value = false
 }
@@ -141,7 +140,6 @@ const sendMessage = async()=> {
       messages: messages.value, // 传递当前的消息
       model: isActive.value?'deepseek-reasoner':'deepseek-chat' // 使用 DeepSeek 的聊天模型
     });
-
     messages.value.push({role:response.choices[0].message.role,
                         content:response.choices[0].message.content})
 
@@ -247,7 +245,7 @@ const sendMessage = async()=> {
     color: #1f2937 !important;
     box-shadow: none !important;
     transition: all 0.3s ease !important;
-    width: 900px !important;
+    width: 1100px !important;
     height: 98px !important;
 
     &:focus {

@@ -3,8 +3,13 @@
     border-radius: 6px;
     padding: 12px;
     background: #f8f8f8;
-    margin: 8px 0;
     overflow-x: auto;
+    margin-top: -80px;
+    margin-bottom: -30px !important;
+}
+
+pre{
+    margin-bottom: -60px !important;
 }
 
 /* 表格样式 */
@@ -31,15 +36,12 @@
 }
 
 .message-content {
-    line-height: 1.6;
+    line-height: 1.5;
 }
 
 .message-content p {
     margin: 8px 0;
 }
-
-
-
 /* 代码底部操作栏 */
 .code-footer {
     display: flex;
@@ -78,5 +80,33 @@
     margin-right: 3px;
 }
 
+/* 表格基础样式 */
+table {
+    width: 100%;
+    border-collapse: collapse; /* 合并边框 */
+    margin: 1em 0;
+    background: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* 可选：添加阴影增强视觉效果 */
+}
 
+/* 表头样式 */
+th {
+    background-color: #f8f9fa; /* 浅灰色背景 */
+    border: 1px solid #dee2e6; /* 边框颜色 */
+    padding: 12px 15px; /* 内边距 */
+    font-weight: 600; /* 加粗字体 */
+    text-align: left;
+}
+
+/* 单元格样式 */
+td {
+    border: 1px solid #dee2e6;
+    padding: 12px 15px;
+    color: #333; /* 文字颜色 */
+}
+
+/* 斑马纹效果（可选） */
+tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
 
