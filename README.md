@@ -15,15 +15,13 @@ pnpm install
 
 ## Configure API Key
 
-Edit the API key value in:
+Create a `.env.local` file in the project root:
 
-- `src/composables/useChat.js`
-
-Find this line and replace it with your own key:
-
-```js
-let api = 'YOUR_DEEPSEEK_API_KEY'
+```bash
+VUE_APP_DEEPSEEK_API_KEY=your_deepseek_api_key
 ```
+
+The app reads this value from `process.env.VUE_APP_DEEPSEEK_API_KEY`.
 
 ## Run in Development
 

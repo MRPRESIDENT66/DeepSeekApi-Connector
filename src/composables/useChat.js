@@ -1,16 +1,7 @@
 import OpenAI from 'openai'
 import { ref } from 'vue'
 
-/**************************************************************
- * 🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨
- *                ⚠️⚠️ IMPORTANT EDIT NOTE ⚠️⚠️
- *                Replace this api value with your own API key.
- **************************************************************/
-let api = 'sk-562cb414258d48d9af71c9cd528972d9' // Temporary key, must be replaced.
-/**************************************************************
- *
- * 🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨
- **************************************************************/
+const api = process.env.VUE_APP_DEEPSEEK_API_KEY || ''
 
 const openai = new OpenAI({
   baseURL: 'https://api.deepseek.com',
