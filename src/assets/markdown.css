@@ -1,4 +1,4 @@
-/* 代码块样式 */
+/* Code block styles */
 .hljs {
     border-radius: 6px;
     padding: 12px;
@@ -12,7 +12,7 @@ pre{
     margin-bottom: -60px !important;
 }
 
-/* 表格样式 */
+/* Table styles */
 .markdown-table {
     width: 100%;
     border-collapse: collapse;
@@ -24,7 +24,7 @@ pre{
     padding: 8px;
 }
 
-/* 消息卡片样式 */
+/* Message card styles */
 .message-card.assistant {
     background: #f5f5f5;
     margin-right: 20%;
@@ -42,7 +42,7 @@ pre{
 .message-content p {
     margin: 8px 0;
 }
-/* 代码底部操作栏 */
+/* Code footer action bar */
 .code-footer {
     display: flex;
     justify-content: space-between;
@@ -52,7 +52,7 @@ pre{
     border-top: 1px solid #ddd;
 }
 
-/* 最小化复制按钮 */
+/* Compact copy button */
 .code-block-wrapper {
     position: relative;
 }
@@ -80,33 +80,32 @@ pre{
     margin-right: 3px;
 }
 
-/* 表格基础样式 */
+/* Base table styles */
 table {
     width: 100%;
-    border-collapse: collapse; /* 合并边框 */
+    border-collapse: collapse; /* Merge borders */
     margin: 1em 0;
     background: white;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* 可选：添加阴影增强视觉效果 */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* Optional subtle shadow */
 }
 
-/* 表头样式 */
+/* Table header styles */
 th {
-    background-color: #f8f9fa; /* 浅灰色背景 */
-    border: 1px solid #dee2e6; /* 边框颜色 */
-    padding: 12px 15px; /* 内边距 */
-    font-weight: 600; /* 加粗字体 */
+    background-color: #f8f9fa; /* Light gray background */
+    border: 1px solid #dee2e6; /* Border color */
+    padding: 12px 15px; /* Cell padding */
+    font-weight: 600; /* Bold text */
     text-align: left;
 }
 
-/* 单元格样式 */
+/* Table cell styles */
 td {
     border: 1px solid #dee2e6;
     padding: 12px 15px;
-    color: #333; /* 文字颜色 */
+    color: #333; /* Text color */
 }
 
-/* 斑马纹效果（可选） */
+/* Zebra striping (optional) */
 tr:nth-child(even) {
     background-color: #f8f9fa;
 }
-

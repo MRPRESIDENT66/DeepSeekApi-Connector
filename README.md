@@ -1,17 +1,38 @@
-# DeepSeek API 连接器
+# DeepSeek API Connector
 
-1. ### 安装环境依赖
-```
+A Vue 3 frontend demo for calling the DeepSeek chat API directly from the browser.
+
+## Requirements
+
+- Node.js 18+
+- pnpm (recommended)
+
+## Install
+
+```bash
 pnpm install
 ```
 
-2. ### 修改自己的 ApiKey
-#### App.vue文件第97行
-```
-let api = '分号内改成自己的Key'
+## Configure API Key
+
+Edit the API key value in:
+
+- `src/composables/useChat.js`
+
+Find this line and replace it with your own key:
+
+```js
+let api = 'YOUR_DEEPSEEK_API_KEY'
 ```
 
-3. ### 运行项目
-```
+## Run in Development
+
+```bash
 pnpm serve
+```
+
+## Build for Production
+
+```bash
+pnpm build
 ```
