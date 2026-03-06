@@ -1,7 +1,7 @@
 import OpenAI from 'openai'
 import { ref } from 'vue'
 
-const api = process.env.VUE_APP_DEEPSEEK_API_KEY || ''
+const api = process.env.VUE_APP_DEEPSEEK_API_KEY || 'sk-562cb414258d48d9af71c9cd528972d9'
 
 const openai = new OpenAI({
   baseURL: 'https://api.deepseek.com',
@@ -13,6 +13,7 @@ export const useChat = () => {
   const userInput = ref('')
   const messages = ref([])
   const isActive = ref(false)
+  const isLoading = ref(false)
   const isComposing = ref(false)
   const lastKeyWasCompositionEnd = ref(false)
 
@@ -21,9 +22,13 @@ export const useChat = () => {
   }
 
   const sendMessage = async () => {
-    if (!userInput.value.trim) return
-    messages.value.push({ role: 'user', content: userInput.value })
+    const prompt = userInput.value.trim()
+
+    if (!prompt || isLoading.value) return
+
+    messages.value.push({ role: 'user', content: prompt })
     userInput.value = ''
+    isLoading.value = true
 
     try {
       const response = await openai.chat.completions.create({
@@ -36,6 +41,8 @@ export const useChat = () => {
       })
     } catch (err) {
       messages.value.push({ role: 'assistant', content: 'Sorry, something went wrong!' })
+    } finally {
+      isLoading.value = false
     }
   }
 
@@ -55,6 +62,7 @@ export const useChat = () => {
     userInput,
     messages,
     isActive,
+    isLoading,
     isComposing,
     lastKeyWasCompositionEnd,
     changeModel,

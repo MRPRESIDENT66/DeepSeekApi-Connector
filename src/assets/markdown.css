@@ -1,111 +1,125 @@
-/* Code block styles */
-.hljs {
-    border-radius: 6px;
-    padding: 12px;
-    background: #f8f8f8;
-    overflow-x: auto;
-    margin-top: -80px;
-    margin-bottom: -30px !important;
+.message-content pre,
+.message-content code,
+.message-content table,
+.message-content blockquote,
+.message-content ul,
+.message-content ol {
+  max-width: 100%;
 }
 
-pre{
-    margin-bottom: -60px !important;
+.message-content p,
+.message-content ul,
+.message-content ol,
+.message-content blockquote,
+.message-content table {
+  margin: 1em 0;
 }
 
-/* Table styles */
-.markdown-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 12px 0;
+.message-content a {
+  color: #2361a2;
+  text-decoration: underline;
+  text-decoration-color: rgba(35, 97, 162, 0.25);
 }
 
-.markdown-table th, .markdown-table td {
-    border: 1px solid #ddd;
-    padding: 8px;
+.message-content ul,
+.message-content ol {
+  padding-left: 1.35em;
 }
 
-/* Message card styles */
-.message-card.assistant {
-    background: #f5f5f5;
-    margin-right: 20%;
+.message-content blockquote {
+  margin-left: 0;
+  padding: 0.9em 1em;
+  border-left: 3px solid rgba(63, 136, 197, 0.28);
+  background: rgba(63, 136, 197, 0.06);
+  border-radius: 0 14px 14px 0;
 }
 
-.message-card.user {
-    background: #e3f2fd;
-    margin-left: 20%;
+.message-content :not(pre) > code {
+  padding: 0.18em 0.42em;
+  border-radius: 8px;
+  background: rgba(24, 49, 83, 0.08);
+  font-size: 0.92em;
 }
 
-.message-content {
-    line-height: 1.5;
-}
-
-.message-content p {
-    margin: 8px 0;
-}
-/* Code footer action bar */
-.code-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 6px 12px;
-    background: #f0f0f0;
-    border-top: 1px solid #ddd;
-}
-
-/* Compact copy button */
 .code-block-wrapper {
-    position: relative;
+  margin: 1.1em 0;
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid rgba(78, 110, 152, 0.12);
+  box-shadow: 0 16px 30px rgba(27, 44, 73, 0.08);
+}
+
+.hljs {
+  margin: 0;
+  padding: 18px 20px;
+  overflow-x: auto;
+  background:
+    radial-gradient(circle at top right, rgba(102, 167, 255, 0.1), transparent 18%),
+    #0f1b2d;
+  color: #eaf3ff;
+}
+
+.code-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  background: #eef3f9;
+  color: #47617f;
+  font-size: 12px;
+}
+
+.code-lang {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 .copy-btn {
-    top: 6px;
-    right: 6px;
-    font-size: 12px;
-    padding: 2px 6px;
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 3px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    flex-direction: row-reverse;
-    justify-content: flex-start;
-    height: 19px;
-    width: 40px;
+  border: 0;
+  border-radius: 999px;
+  padding: 6px 10px;
+  background: #ffffff;
+  color: #1a3152;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .copy-btn svg {
-    width: 12px;
-    height: 12px;
-    margin-right: 3px;
+  fill: currentColor;
 }
 
-/* Base table styles */
-table {
-    width: 100%;
-    border-collapse: collapse; /* Merge borders */
-    margin: 1em 0;
-    background: white;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* Optional subtle shadow */
+.message-content table {
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 16px;
 }
 
-/* Table header styles */
-th {
-    background-color: #f8f9fa; /* Light gray background */
-    border: 1px solid #dee2e6; /* Border color */
-    padding: 12px 15px; /* Cell padding */
-    font-weight: 600; /* Bold text */
-    text-align: left;
+.message-content th {
+  text-align: left;
+  padding: 12px 14px;
+  background: #edf3fa;
+  color: #203450;
 }
 
-/* Table cell styles */
-td {
-    border: 1px solid #dee2e6;
-    padding: 12px 15px;
-    color: #333; /* Text color */
+.message-content td {
+  padding: 12px 14px;
+  background: rgba(255, 255, 255, 0.84);
+  border-top: 1px solid rgba(96, 123, 159, 0.12);
 }
 
-/* Zebra striping (optional) */
-tr:nth-child(even) {
-    background-color: #f8f9fa;
+.message-card.user .message-content a {
+  color: #d8ecff;
+  text-decoration-color: rgba(216, 236, 255, 0.3);
+}
+
+.message-card.user .message-content blockquote {
+  background: rgba(248, 251, 255, 0.08);
+  border-left-color: rgba(248, 251, 255, 0.24);
+}
+
+.message-card.user .message-content :not(pre) > code {
+  background: rgba(248, 251, 255, 0.12);
 }
