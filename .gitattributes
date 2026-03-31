@@ -1,0 +1,2 @@
+# Bias GitHub Linguist language stats toward JavaScript in this Vue project.
+*.vue linguist-language=JavaScript
